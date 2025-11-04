@@ -3,17 +3,17 @@ extends Node
 
 signal transition
 
-func on_process(_delta : float):
+func _on_process(_delta : float):
 	pass
 
 
-func on_physics_process(_delta : float):
+func _on_physics_process(_delta : float):
 	pass
 
 
-func on_enter():
+func _on_enter():
 	pass
 
 
-func on_exit():
+func _on_exit():
 	pass

@@ -5,10 +5,10 @@ extends NodeState
 
 var direction : Vector2
 
-func _on_process(_delta : float) -> void:
+func _on_process(_delta: float) -> void:
 	pass
 	
-func _on_physics_process(_delta : float) -> void:
+func _on_physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("walk_left"):
 		direction = Vector2.LEFT
 	elif Input.is_action_pressed("walk_right"):

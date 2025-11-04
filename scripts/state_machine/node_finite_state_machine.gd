@@ -15,13 +15,13 @@ func _ready():
 			child.transition.connect(on_state_transition)
 	
 	if initial_node_state:
-		initial_node_state.on_enter()
+		initial_node_state._on_enter()
 		current_node_state = initial_node_state
 
 
 func _process(delta : float):
 	if current_node_state:
-		current_node_state.on_process(delta)
+		current_node_state._on_process(delta)
 
 
 func _physics_process(delta: float):
@@ -41,9 +41,9 @@ func on_state_transition(node_state_name : String):
 		return
 	
 	if current_node_state:
-		current_node_state.on_exit()
+		current_node_state._on_exit()
 	
-	new_node_state.on_enter()
+	new_node_state._on_enter()
 	
 	current_node_state = new_node_state
 	current_node_state_name = current_node_state.name.to_lower()

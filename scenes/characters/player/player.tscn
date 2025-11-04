@@ -1,9 +1,10 @@
-[gd_scene load_steps=47 format=3 uid="uid://dmng0y6272h6c"]
+[gd_scene load_steps=48 format=3 uid="uid://dmng0y6272h6c"]
 
 [ext_resource type="Texture2D" uid="uid://dviiv6t6y5ifi" path="res://assets/game/characters/basic_character_actions.png" id="1_t61fv"]
 [ext_resource type="Texture2D" uid="uid://bmarq4qqx6143" path="res://assets/game/characters/basic_charakter_spritesheet.png" id="2_686vu"]
 [ext_resource type="Script" uid="uid://c6uytje1tc60u" path="res://scripts/state_machine/node_finite_state_machine.gd" id="3_hss88"]
 [ext_resource type="Script" uid="uid://bbg3185wgyobp" path="res://scenes/characters/player/idle_state.gd" id="4_qd3e3"]
+[ext_resource type="Script" uid="uid://bh0rwj6im3rih" path="res://scenes/characters/player/walk_state.gd" id="5_qd3e3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hss88"]
 atlas = ExtResource("1_t61fv")
@@ -411,3 +412,6 @@ initial_node_state = NodePath("Idle")
 script = ExtResource("4_qd3e3")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("5_qd3e3")
